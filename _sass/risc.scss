@@ -1,0 +1,33 @@
+body {
+  font-family: 'Cinzel Decorative', cursive;
+}
+
+.page-header {
+  background-image: none;
+  background-color: $green;
+  text-align: right;
+  text-shadow: 0px 1px 0px rgba(255,255,255,.3), 0px -1px 0px rgba(0,0,0,.7);
+
+  .project-tagline{
+    opacity: 0.9;
+  }
+
+  .logo {
+
+    @include large {
+      height: 146px;
+    }
+
+    @include medium {
+      height: 118px;
+    }
+
+    @include small {
+      height: 100px;
+    }
+
+    img {
+      max-height: 100%;
+    }
+  }
+}

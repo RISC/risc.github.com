@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <meta charset="UTF-8">
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+    <meta name="description" content="{{ page.description | default: site.description }}"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative" rel="stylesheet">    
+    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+  </head>
+  <body>
+    <header class="page-header clear-after">
+      <div class="pull-left logo">
+        <a href="/">
+          <img alt="Royal Ixelles Swimming Club Water-polo" src="/images/risc.png"/>
+        </a>
+      </div>
+      <div class="pull-right">
+        <h1 class="project-name">{{ site.title }}</h1>
+        <h2 class="project-tagline">{{ site.description }}</h2>
+      </div>
+    </header>
+
+    <section class="main-content">
+      {{ content }}
+
+      <footer class="site-footer">
+        <span class="site-footer-credits">© 1904 - {{ 'now' | date: "%Y" }} Royal Ixelles Swimming Club </span>
+      </footer>
+    </section>
+
+    {% if site.google_analytics %}
+      <script type="text/javascript">
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', '{{ site.google_analytics }}', 'auto');
+        ga('send', 'pageview');
+      </script>
+    {% endif %}
+  </body>
+</html>
