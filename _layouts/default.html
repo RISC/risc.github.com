@@ -1,35 +1,73 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
+{% assign ref=page.ref | default: 'index' %}
+{% assign pages=site.pages | where:"ref", ref  | sort: 'lang' %}
+{% assign lang=page.lang | default: "en" %}
+<html lang="{{ lang }}">
   <head>
     <meta charset="UTF-8">
     <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
     <meta name="description" content="{{ page.description | default: site.description }}"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="theme-color" content="#157878">
-    <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative" rel="stylesheet">    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Exo" rel="stylesheet">
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    {% for alternatePage in pages %}
+      <link rel="alternate" hreflang="{{ alternatePage.lang }}" href="{{ alternatePage.url }}" />
+    {% endfor %}
   </head>
   <body>
-    <header class="page-header clear-after">
-      <div class="pull-left logo">
-        <a href="/">
-          <img alt="Royal Ixelles Swimming Club Water-polo" src="/images/risc.png"/>
-        </a>
+    <nav class="navbar navbar-toggleable-sm navbar-inverse">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="/">
+        <img src="/assets/images/risc-logo.png" alt="RISC logo"/>
+        RISC - Water-Polo
+      </a>
+
+      <div class="collapse navbar-collapse" id="navbar">
+        <ul class="navbar-nav ml-auto">
+          {% for menu in site.t[lang] %}
+            <li class="nav-item {% if page.url == "#{lang}/#{menu[1].url}.html" %}active{% endif %}">
+              <a class="nav-link" href="/{{ lang }}/{{ menu[1].url }}">
+                {{ menu[1].label }}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+
+        <ul class="navbar-nav">
+          {% for page in pages %}
+            <li class="nav-item">
+              <a class="nav-link" href="{{ page.url }}">
+                {{ page.lang | upcase }}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
       </div>
-      <div class="pull-right">
-        <h1 class="project-name">{{ site.title }}</h1>
-        <h2 class="project-tagline">{{ site.description }}</h2>
-      </div>
-    </header>
+    </nav>
 
     <section class="main-content">
       {{ content }}
 
       <footer class="site-footer">
-        <span class="site-footer-credits">© 1904 - {{ 'now' | date: "%Y" }} Royal Ixelles Swimming Club </span>
+        <div class="d-flex justify-content-start align-items-center">
+          <div>
+            <img src="/assets/images/risc.png" alt="RISC logo"/>
+          </div>
+          <div class="ml-auto">
+              © 1904 - {{ 'now' | date: "%Y" }} Royal Ixelles Swimming Club
+          </div>
+        </div>
       </footer>
     </section>
 
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
     {% if site.google_analytics %}
       <script type="text/javascript">
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

@@ -1,33 +1,25 @@
+@import "var";
+
 body {
-  font-family: 'Cinzel Decorative', cursive;
+  font-family: Exo, sans-serif;
 }
 
-.page-header {
-  background-image: none;
+nav {
+
   background-color: $green;
-  text-align: right;
-  text-shadow: 0px 1px 0px rgba(255,255,255,.3), 0px -1px 0px rgba(0,0,0,.7);
 
-  .project-tagline{
-    opacity: 0.9;
-  }
-
-  .logo {
-
-    @include large {
-      height: 146px;
-    }
-
-    @include medium {
-      height: 118px;
-    }
-
-    @include small {
-      height: 100px;
-    }
+  .navbar-brand{
+    text-shadow: 0 1px 0 rgba(255,255,255,.3), 0 -1px 0 rgba(0,0,0,.7);
 
     img {
-      max-height: 100%;
+      width: 8rem;
+      padding-right: 1rem;
     }
+  }
+}
+
+footer {
+  img {
+    width: 5rem;
   }
 }
