@@ -29,7 +29,7 @@
       <div class="collapse navbar-collapse" id="navbar">
         <ul class="navbar-nav ml-auto">
           {% for menu in site.t[lang] %}
-            <li class="nav-item {% if page.url == "#{lang}/#{menu[1].url}.html" %}active{% endif %}">
+            <li class="nav-item {% if page.url == "/#{lang}/#{menu[1].url}.html" %}active{% endif %}">
               <a class="nav-link" href="/{{ lang }}/{{ menu[1].url }}">
                 {{ menu[1].label }}
               </a>
