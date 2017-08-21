@@ -1,10 +1,5 @@
 <!DOCTYPE html>
-{% assign lang=page.lang | default: "en" %}
-{% assign ref=page.ref | default: 'index' %}
-{% assign pages=site.pages | where:"ref", ref  | sort: 'lang' %}
-{% assign localPages=site.pages | where:"lang", lang  | sort: 'sort'  %}
-{% assign languages=pages | where_exp:"item", "item.lang != lang" %}
-<html lang="{{ lang }}">
+<html lang="x-default">
     <head>
         <meta charset="UTF-8">
         <title>
@@ -15,7 +10,8 @@
         <meta name="viewport"
               content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="theme-color" content="#157878">
-        <link rel="shortcut icon" type="image/png" href="/assets/images/risc-icon.png"/>
+        <link rel="shortcut icon" type="image/png"
+              href="/assets/images/risc-icon.png"/>
         <link rel="stylesheet"
               href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
               integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
@@ -23,63 +19,30 @@
         <link href="https://fonts.googleapis.com/css?family=Exo" rel="stylesheet">
         <link rel="stylesheet"
               href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
-        {% for alternatePage in pages %}
-        <link rel="alternate" hreflang="{{ alternatePage.lang }}"
-              href="{{ alternatePage.url }}"/>
-        {% endfor %}
     </head>
-    <body>
-        <nav class="navbar navbar-toggleable-sm navbar-inverse">
-            <button class="navbar-toggler navbar-toggler-right" type="button"
-                    data-toggle="collapse" data-target="#navbar"
-                    aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <a class="navbar-brand" href="/{{ lang }}">
-                <img src="/assets/images/risc-logo.png" alt="RISC logo"/>
-                RISC - Water-Polo
-            </a>
-
-            <div class="collapse navbar-collapse" id="navbar">
-                <ul class="navbar-nav ml-auto">
-                    {% for menu in localPages %}
-                    <li class="nav-item {% if page.path == menu.path %}active{% endif %}">
-                        <a class="nav-link" href="{{ menu.url }}">
-                            {{ menu.label }}
-                        </a>
-                    </li>
-                    {% endfor %}
-                </ul>
-                <ul class="navbar-nav">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="{{ page.url }}"
-                           id="navbarDropdownMenuLink" data-toggle="dropdown"
-                           aria-haspopup="true" aria-expanded="false">
-                            {{ lang | upcase }}
-                        </a>
-                        <div class="dropdown-menu"
-                             aria-labelledby="navbarDropdownMenuLink">
-                            {% for page in languages %}
-                            <a class="dropdown-item" href="{{ page.url }}">
-                                {{page.lang | upcase }}
-                            </a>
-                            {% endfor %}
-                        </div>
-                    </li>
-
-                </ul>
-            </div>
-        </nav>
-
+    <body class="splash">
         <section class="main-content">
+            <div class="row align-items-end">
+                <div class="col-7">
+                    <img src="/assets/images/risc-logo-splash.png" alt="RISC logo"/>
+                </div>
+                <div class="col-5">
+                    <p>
+                        <a href="/en">Continue in English</a>
+                    </p>
+                    <p>
+                        <a href="/fr">Continuer en Français</a>
+                    </p>
+                    <p>
+                        <a href="/nl">Verdergaan in het Nederlands</a>
+                    </p>
+                </div>
+            </div>
+
             {{ content }}
 
             <footer class="site-footer">
                 <div class="d-flex justify-content-start align-items-center">
-                    <div>
-                        <img src="/assets/images/risc.png" alt="RISC logo"/>
-                    </div>
                     <div class="ml-auto">
                         © 1904 - {{ 'now' | date: "%Y" }} Royal Ixelles Swimming Club
                     </div>

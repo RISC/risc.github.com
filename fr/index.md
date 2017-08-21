@@ -1,6 +1,8 @@
 ---
 lang: fr
+label: Accueil
 ref: index
+sort: 10
 ---
 
 # Convulsaque satiata aetas si silices tu ne [FR]

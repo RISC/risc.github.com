@@ -1,7 +1,9 @@
 ---
 lang: fr
 ref: about
-description: Un peu d'histoire du Royal Ixelles Swimming Club 
+label: À Propos
+description: Un peu d'histoire du Royal Ixelles Swimming Club
+sort: 20
 ---
 
 # À Propos

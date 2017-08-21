@@ -1,7 +1,39 @@
 @import "var";
 
+.splash {
+  margin-top: 4rem;
+
+  background-color: $green;
+
+  color: $blue;
+
+  p {
+    margin-bottom: 0.5vw;
+  }
+
+  a {
+    font-size: calc(0.5rem + 1vw);
+    color: $blue;
+
+    &::after {
+      white-space: nowrap;
+      content: ' »';
+    }
+  }
+
+  .site-footer {
+    font-size: calc(0.4rem + 0.2vw);
+    margin-top: 16rem;
+    padding-top: calc(0.4rem + 0.8vw);
+  }
+}
+
 body {
   font-family: Exo, sans-serif;
+
+  .site-footer {
+    border-top-color: $blue;
+  }
 }
 
 nav {

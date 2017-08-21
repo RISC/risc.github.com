@@ -1,6 +1,8 @@
 ---
 lang: nl
 ref: index
+label: Home
+sort: 10
 ---
 
 # Convulsaque satiata aetas si silices tu ne [NL]

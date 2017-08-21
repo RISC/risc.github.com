@@ -1,26 +1,4 @@
 title: "RISC - Water-polo"
 description: "Royal Ixelles Swimming Club - Water-Polo Club in Ixelles, Brussels, Belgium"
 theme: jekyll-theme-cayman
-
-t:
-  en:
-    contact:
-      label: "Contact Us"
-      url: "contact-us"
-    about:
-      label: "About Us"
-      url: "about"
-  fr:
-    contact:
-      label: "Contact"
-      url: "contact"
-    about:
-      label: "À Propos"
-      url: "a-propos"
-  nl:
-    contact:
-      label: "Contacteer ons"
-      url: "Contacteer-ons"
-    about:
-      label: "Over Ons"
-      url: "over-ons"
+google_analytics: UA-15039913-1
