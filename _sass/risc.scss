@@ -11,8 +11,12 @@
     margin-bottom: 0.5vw;
   }
 
+  .col-5 {
+    padding-left: 0;
+  }
+
   a {
-    font-size: calc(0.5rem + 1vw);
+    font-size: calc(0.3rem + 1vw);
     color: $blue;
 
     &::after {
@@ -40,8 +44,8 @@ nav {
 
   background-color: $green;
 
-  .navbar-brand{
-    text-shadow: 0 1px 0 rgba(255,255,255,.3), 0 -1px 0 rgba(0,0,0,.7);
+  .navbar-brand {
+    text-shadow: 0 1px 0 rgba(255, 255, 255, .3), 0 -1px 0 rgba(0, 0, 0, .7);
 
     img {
       width: 8rem;
