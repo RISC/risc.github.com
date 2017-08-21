@@ -21,7 +21,7 @@
               href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     </head>
     <body class="splash">
-        <section class="main-content">
+        <section class="main-content container">
             <div class="row align-items-end">
                 <div class="col-7">
                     <img src="/assets/images/risc-logo-splash.png" alt="RISC logo"/>
@@ -38,17 +38,15 @@
                     </p>
                 </div>
             </div>
-
             {{ content }}
-
-            <footer class="site-footer">
-                <div class="d-flex justify-content-start align-items-center">
-                    <div class="ml-auto">
-                        © 1904 - {{ 'now' | date: "%Y" }} Royal Ixelles Swimming Club
-                    </div>
-                </div>
-            </footer>
         </section>
+        <footer class="site-footer">
+            <div class="container d-flex justify-content-start align-items-center">
+                <div class="ml-auto">
+                    © 1904 - {{ 'now' | date: "%Y" }} Royal Ixelles Swimming Club
+                </div>
+            </div>
+        </footer>
 
         <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
                 integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
