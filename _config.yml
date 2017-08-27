@@ -1,4 +1,3 @@
 title: "RISC - Water-polo"
 description: "Royal Ixelles Swimming Club - Water-Polo Club in Ixelles, Brussels, Belgium"
 google_analytics: UA-15039913-1
-gems: [bootstrap, autoprefixer-rails]
