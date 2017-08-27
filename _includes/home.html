@@ -1,0 +1,11 @@
+<div>
+    {% for post in site.posts %}
+        <div>
+            <h6>
+                {{ post.title }} <small class="text-muted">on {{ post.date }}</small>
+            </h6>
+            <div>{{ post.content }}</div>
+            <a href="{{ post.url }}">read more</a>
+        </div>
+    {% endfor %}
+</div>

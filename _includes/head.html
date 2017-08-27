@@ -1,0 +1,19 @@
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}
+    </title>
+    <meta name="description"
+          content="{{ page.description | default: site.description }}"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#157878">
+    <link rel="shortcut icon" type="image/png" href="/assets/images/risc-icon.png"/>
+    <link href="https://fonts.googleapis.com/css?family=Exo" rel="stylesheet">
+    <link rel="stylesheet"
+          href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    {% for alternatePage in pages %}
+    <link rel="alternate" hreflang="{{ alternatePage.lang }}"
+          href="{{ alternatePage.url }}"/>
+    {% endfor %}
+</head>

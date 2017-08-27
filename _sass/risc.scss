@@ -1,5 +1,3 @@
-@import "var";
-
 .splash {
   margin-top: 4rem;
 
@@ -11,12 +9,16 @@
     margin-bottom: 0.5vw;
   }
 
-  .col-5 {
+  .col-6 {
+    padding-right: 0;
+  }
+
+  .col-6:last-child {
     padding-left: 0;
+    padding-right: 15px;
   }
 
   a {
-    font-size: calc(0.3rem + 1vw);
     color: $blue;
 
     &::after {
@@ -26,16 +28,15 @@
   }
 
   .site-footer {
-    font-size: calc(0.4rem + 0.2vw);
-    padding-top: calc(0.4rem + 0.8vw);
+    padding-top: 0.2rem;
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 3rem;
   }
 }
 
 body {
+  margin-top: 5rem;
   font-family: Exo, sans-serif;
 
   .main-content {
@@ -46,36 +47,75 @@ body {
     }
   }
 
-  .site-footer {
-    border-top: none;
+  nav {
+
+    background-color: $green;
+
+    .navbar-brand {
+      text-shadow: 0 1px 0 rgba(255, 255, 255, .3), 0 -1px 0 rgba(0, 0, 0, .7);
+
+      img {
+        height: 4rem;
+        padding-right: 0.2rem;
+      }
+    }
+
+    .navbar-toggler-right {
+      right: 0.4rem;
+      top: 0.8rem;
+    }
+  }
+
+  footer {
+    &.site-footer {
+      border-top: none;
+    }
 
     .container {
       padding: 1rem 0.4rem;
-      border-top: 1px solid $blue;
+      border-top: 1px solid;
+      border-color: rgba(red($blue), green($blue), blue($blue), 0.2);
+    }
+
+    img {
+      height: 3rem;
+      padding-right: 0.2rem;
     }
   }
 }
 
-nav {
-
-  background-color: $green;
-
-  .navbar-brand {
-    text-shadow: 0 1px 0 rgba(255, 255, 255, .3), 0 -1px 0 rgba(0, 0, 0, .7);
-
-    img {
-      width: 10rem;
-      padding-right: 1rem;
-    }
-  }
-
-  .navbar-toggler {
-    padding: 0.1rem 0.4rem;
-  }
+html {
+  font-size: $font-size-base;
+  text-align: justify;
 }
 
 footer {
-  img {
-    width: 5rem;
+  font-size: $font-size-base - 0.4rem;
+}
+
+@include media-breakpoint-up(sm) {
+  html {
+    font-size: $font-size-base + 0.1rem;
+  }
+  footer {
+    font-size: $font-size-base - 0.3rem;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  html {
+    font-size: $font-size-base + 0.2rem;
+  }
+  footer {
+    font-size: $font-size-base - 0.2rem;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  html {
+    font-size: $font-size-base + 0.3rem;
+  }
+  footer {
+    font-size: $font-size-base - 0.21rem;
   }
 }

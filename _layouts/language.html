@@ -1,32 +1,13 @@
 <!DOCTYPE html>
 <html lang="x-default">
-    <head>
-        <meta charset="UTF-8">
-        <title>
-            {% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}
-        </title>
-        <meta name="description"
-              content="{{ page.description | default: site.description }}"/>
-        <meta name="viewport"
-              content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="theme-color" content="#157878">
-        <link rel="shortcut icon" type="image/png"
-              href="/assets/images/risc-icon.png"/>
-        <link rel="stylesheet"
-              href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
-              integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
-              crossorigin="anonymous">
-        <link href="https://fonts.googleapis.com/css?family=Exo" rel="stylesheet">
-        <link rel="stylesheet"
-              href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
-    </head>
+    {% include head.html %}
     <body class="splash">
         <section class="main-content container">
             <div class="row align-items-end">
-                <div class="col-7">
-                    <img src="/assets/images/risc-logo-splash.png" alt="RISC logo"/>
+                <div class="col-6">
+                    <img class="img-fluid" src="/assets/images/risc-logo-splash.png" alt="RISC logo"/>
                 </div>
-                <div class="col-5">
+                <div class="col-6">
                     <p>
                         <a href="/en">Continue in English</a>
                     </p>
@@ -40,40 +21,6 @@
             </div>
             {{ content }}
         </section>
-        <footer class="site-footer">
-            <div class="container d-flex justify-content-start align-items-center">
-                <div class="ml-auto">
-                    © 1904 - {{ 'now' | date: "%Y" }} Royal Ixelles Swimming Club
-                </div>
-            </div>
-        </footer>
-
-        <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
-                integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
-                crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
-                integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
-                crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
-                integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
-                crossorigin="anonymous"></script>
-        {% if site.google_analytics %}
-        <script type="text/javascript">
-            (function (i, s, o, g, r, a, m) {
-                i['GoogleAnalyticsObject'] = r;
-                i[r] = i[r] || function () {
-                    (i[r].q = i[r].q || []).push(arguments)
-                }, i[r].l = 1 * new Date();
-                a = s.createElement(o),
-                    m = s.getElementsByTagName(o)[0];
-                a.async = 1;
-                a.src = g;
-                m.parentNode.insertBefore(a, m)
-            })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-
-            ga('create', '{{ site.google_analytics }}', 'auto');
-            ga('send', 'pageview');
-        </script>
-        {% endif %}
+        {% include footer.html %}
     </body>
 </html>
