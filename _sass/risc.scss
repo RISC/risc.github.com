@@ -1,13 +1,5 @@
 .splash {
-  margin-top: 4rem;
-
   background-color: $green;
-
-  color: $blue;
-
-  p {
-    margin-bottom: 0.5vw;
-  }
 
   .col-6 {
     padding-right: 0;
@@ -15,20 +7,14 @@
 
   .col-6:last-child {
     padding-left: 0;
-    padding-right: 15px;
+    padding-right: 1rem;
   }
 
   a {
     color: $blue;
-
-    &::after {
-      white-space: nowrap;
-      content: ' »';
-    }
   }
 
-  .site-footer {
-    padding-top: 0.2rem;
+  footer {
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -37,14 +23,9 @@
 
 body {
   margin-top: 5rem;
-  font-family: Exo, sans-serif;
 
-  .main-content {
-    padding: 2rem 0.5rem 0;
-
-    p {
-      text-align: justify;
-    }
+  main {
+    padding: 2rem 0.5rem 2rem;
   }
 
   nav {
@@ -67,10 +48,6 @@ body {
   }
 
   footer {
-    &.site-footer {
-      border-top: none;
-    }
-
     .container {
       padding: 1rem 0.4rem;
       border-top: 1px solid;
@@ -86,6 +63,7 @@ body {
 
 html {
   font-size: $font-size-base;
+  font-family: Exo, sans-serif;
   text-align: justify;
 }
 
@@ -117,5 +95,12 @@ footer {
   }
   footer {
     font-size: $font-size-base - 0.21rem;
+  }
+}
+
+.follow-link {
+  &::after {
+    white-space: nowrap;
+    content: ' »';
   }
 }

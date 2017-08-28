@@ -2,25 +2,31 @@
 <html lang="x-default">
     {% include head.html %}
     <body class="splash">
-        <section class="main-content container">
+        <main class="container">
             <div class="row align-items-end">
                 <div class="col-6">
                     <img class="img-fluid" src="/assets/images/risc-logo-splash.png" alt="RISC logo"/>
                 </div>
                 <div class="col-6">
                     <p>
-                        <a href="/en">Continue in English</a>
+                        <a class="follow-link" href="/en">
+                            Continue in English
+                        </a>
                     </p>
                     <p>
-                        <a href="/fr">Continuer en Français</a>
+                        <a class="follow-link" href="/fr">
+                            Continuer en Français
+                        </a>
                     </p>
                     <p>
-                        <a href="/nl">Verdergaan in het Nederlands</a>
+                        <a class="follow-link" href="/nl">
+                            Verdergaan in het Nederlands
+                        </a>
                     </p>
                 </div>
             </div>
             {{ content }}
-        </section>
+        </main>
         {% include footer.html %}
     </body>
 </html>
