@@ -5,7 +5,7 @@ $(document).ready(function(){
             'https://formspree.io/' +
             'ofni'.split("").reverse().join("") +
             String.fromCharCode(64) +
-            window.location.hostname
+            window.location.hostname.replace('www.','')
         );
     });
 });
