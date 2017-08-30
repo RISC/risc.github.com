@@ -15,9 +15,7 @@
   }
 
   footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+    margin-top: 11.8rem;
   }
 }
 
@@ -33,6 +31,7 @@ body {
     background-color: $green;
 
     .navbar-brand {
+        font-weight: bolder;
       text-shadow: 0 1px 0 rgba(255, 255, 255, .3), 0 -1px 0 rgba(0, 0, 0, .7);
 
       img {
@@ -49,7 +48,7 @@ body {
 
   footer {
     .container {
-      padding: 1rem 0.4rem;
+      padding: 0.4rem 0.4rem 0.2rem;
       border-top: 1px solid;
       border-color: rgba(red($blue), green($blue), blue($blue), 0.2);
     }
@@ -61,39 +60,59 @@ body {
   }
 }
 
-html {
+.paragraphe::first-letter,
+p::first-letter {
+    font-weight: 500;
+    font-size: 150%;
+    text-transform: uppercase;
+    padding-left: 1rem;
+}
+
+html,
+body,
+.form-control,
+.btn {
   font-size: $font-size-base;
   text-align: justify;
 }
 
 footer {
-  font-size: $font-size-base - 0.4rem;
+  font-size: $font-size-base - 0.16rem;
 }
 
 @include media-breakpoint-up(sm) {
-  html {
-    font-size: $font-size-base + 0.1rem;
+  html,
+  body,
+  .form-control,
+  .btn {
+    font-size: $font-size-base + 0.08rem;
   }
   footer {
-    font-size: $font-size-base - 0.3rem;
+    font-size: $font-size-base - 0.16rem;
   }
 }
 
 @include media-breakpoint-up(md) {
-  html {
-    font-size: $font-size-base + 0.2rem;
+  html,
+  body,
+  .form-control,
+  .btn {
+    font-size: $font-size-base + 0.16rem;
   }
   footer {
-    font-size: $font-size-base - 0.2rem;
+    font-size: $font-size-base - 0.16rem;
   }
 }
 
 @include media-breakpoint-up(lg) {
-  html {
-    font-size: $font-size-base + 0.3rem;
+  html,
+  body,
+  .form-control,
+  .btn {
+    font-size: $font-size-base + 0.24rem;
   }
   footer {
-    font-size: $font-size-base - 0.21rem;
+    font-size: $font-size-base - 0.16rem;
   }
 }
 
@@ -106,14 +125,6 @@ footer {
 
 iframe {
   width: 100%;
-  height: calc(16rem + 78px);
-  margin-top: -48px;
+  height: 20rem;
   border: 0;
-}
-
-.map {
-  height:16rem;
-  width:100%;
-  display:inline-block;
-  overflow:hidden;
 }

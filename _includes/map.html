@@ -1,0 +1,10 @@
+<div class="container">
+    <h4>{{ site.data[lang].situation | default: 'situation' | capitalize }}</h4>
+
+    <address class="paragraphe">
+        {{ site.data[lang].address1 }} &mdash; {{ site.data[lang].address2 }}
+    </address>
+</div>
+<div class="container-fluid px-0 pb-3">
+    <iframe src="https://www.google.com/maps/d/embed?mid=1vKzME9KcyMFUJM58Ax5j5_P70AE&z=14&hl={{ lang }}"></iframe>
+</div>

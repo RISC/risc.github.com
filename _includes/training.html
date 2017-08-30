@@ -1,0 +1,45 @@
+<div class="my-4">
+    <h4>{{ site.data[lang].trainings | default: 'trainings' | capitalize }}</h4>
+</div>
+<div class="row mt-4">
+    <div class="col-sm-6">
+        <div class="card">
+            <div class="card-header">
+                {{ site.data[lang]['men_training'] | default: "men training" | capitalize }}:
+            </div>
+            <ul class="list-group list-group-flush">
+                {% for training in site.data.training.men %}
+                    <li class="list-group-item">
+                        {% assign day = training[0] %}
+                        {{ site.data[lang].on | default: 'on' | capitalize }}
+                        {{ site.data[lang][day] | default: training[0] | capitalize }}
+                        {{ site.data[lang].from | default: 'from' }}
+                        {{ training[1].from }}
+                        {{ site.data[lang].to | default: 'to' }}
+                        {{ training[1].to }}
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="card">
+            <div class="card-header">
+                {{ site.data[lang]['kids_training'] | default: "kids training" | capitalize }}:
+            </div>
+            <ul class="list-group list-group-flush">
+                {% for training in site.data.training.kids %}
+                    <li class="list-group-item">
+                        {% assign day = training[0] %}
+                        {{ site.data[lang].on | default: 'on' | capitalize }}
+                        {{ site.data[lang][day] | default: training[0] | capitalize }}
+                        {{ site.data[lang].from | default: 'from' }}
+                        {{ training[1].from }}
+                        {{ site.data[lang].to | default: 'to' }}
+                        {{ training[1].to }}
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>

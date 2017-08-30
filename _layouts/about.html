@@ -5,29 +5,12 @@
     {% include nav.html %}
     <body>
         <main class="container">
-
-            Men training:
-            <ul>
-                {% for training in site.data.training.men %}
-                    <li>
-                        {% assign day = training[0] %}
-                        {{ site.data[lang][day] | default: training[0] | capitalize }}
-                        {{ site.data[lang].from | default: 'from' }}
-                        {{ training[1].from }}
-                        {{ site.data[lang].to | default: 'to' }}
-                        {{ training[1].to }}
-                    </li>
-                {% endfor %}
-            </ul>
-
             {{ content }}
+
+            {% include training.html %}
             {% include contact.html %}
         </main>
-        <div class="container-fluid px-0">
-            <div class="map">
-                <iframe src="https://www.google.com/maps/d/embed?mid=1vKzME9KcyMFUJM58Ax5j5_P70AE&z=14&hl={{ lang }}"></iframe>
-            </div>
-        </div>
+        {% include map.html %}
         {% include footer.html %}
     </body>
     {% include script.html %}
