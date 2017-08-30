@@ -1,0 +1,35 @@
+<nav class="navbar navbar-expand-lg navbar-dark navbar-inverse fixed-top">
+    <a class="navbar-brand w-50" href="/{{ lang }}">
+        <img src="/assets/images/risc-logo.png" alt="RISC logo"/>
+        RISC - Water-Polo
+    </a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse ml-auto justify-content-end" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+            {% for menu in localPages %}
+            <li class="nav-item {% if page.path == menu.path %}active{% endif %}">
+                <a class="nav-link" href="{{ menu.url }}">
+                    {{ menu.label }}
+                </a>
+            </li>
+            {% endfor %}
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="{{ page.url }}" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    {{ lang | upcase }}
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    {% for page in languages %}
+                    <a class="dropdown-item" href="{{ page.url }}">
+                        {{page.lang | upcase }}
+                    </a>
+                    {% endfor %}
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>

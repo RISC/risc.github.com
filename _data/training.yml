@@ -1,0 +1,15 @@
+men:
+    tuesday:
+        from: "19:00"
+        to: "21:30"
+    friday:
+        from: "20:00"
+        to: "21:30"
+
+kids:
+    friday:
+        from: "19:00"
+        to: "20:00"
+    sunday:
+        from: "19:00"
+        to: "20:30"

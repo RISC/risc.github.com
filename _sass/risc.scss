@@ -103,3 +103,17 @@ footer {
     content: ' »';
   }
 }
+
+iframe {
+  width: 100%;
+  height: calc(16rem + 78px);
+  margin-top: -48px;
+  border: 0;
+}
+
+.map {
+  height:16rem;
+  width:100%;
+  display:inline-block;
+  overflow:hidden;
+}
