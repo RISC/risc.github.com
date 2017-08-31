@@ -7,7 +7,7 @@ sort: 20
 layout: about
 ---
 
-# About us
+## About us
 
 Founded in 1904, the Royal Ixelles Swimming Club (RISC) is located in the oldest indoor swimming pool in the Brussels-Capital Region. The latter is located in Ixelles, in a district previously called the "Verloren Hoek" (the "Lost corner").
 
