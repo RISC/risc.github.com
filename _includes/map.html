@@ -1,10 +1,8 @@
-<div class="container">
-    <h4>{{ site.data[lang].situation | default: 'situation' | capitalize }}</h4>
+<h4>{{ site.data[lang].situation | default: 'situation' | capitalize }}</h4>
 
-    <address class="paragraphe">
-        {{ site.data[lang].address1 }} &mdash; {{ site.data[lang].address2 }}
-    </address>
-</div>
-<div class="container-fluid px-0 pb-3">
-    <iframe src="https://www.google.com/maps/d/embed?mid=1vKzME9KcyMFUJM58Ax5j5_P70AE&z=14&hl={{ lang }}"></iframe>
-</div>
+<address class="paragraphe">
+    {{ site.data[lang].address1 | default: 'Rue de la Natation, 10' }} &mdash;
+    {{ site.data[lang].address2 | default: '1050 Ixelles, Brussels' }}
+</address>
+
+<iframe src="https://www.google.com/maps/d/embed?mid=1vKzME9KcyMFUJM58Ax5j5_P70AE&z=14&hl={{ lang }}"></iframe>

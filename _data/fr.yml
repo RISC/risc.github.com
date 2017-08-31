@@ -1,4 +1,12 @@
 name: nom
+name_example: Jean Dupont
+name_error: veuillez fournir votre nom
+email: adresse e-mail
+email_example: jean.dupont@example.com
+email_error: veuillez fournir une adresse e-mail valide
+message: votre message
+message_error: veuillez fournir un message
+submit: envoyer
 
 monday: lundi
 tuesday: mardi
@@ -19,4 +27,4 @@ contact: Contactez-nous
 trainings: entraînements
 
 address1: Rue de la Natation, 10
-address2: 1050 Bruxelles
+address2: 1050 Ixelles, Bruxelles
