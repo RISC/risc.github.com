@@ -6,8 +6,8 @@
     <body>
         <main class="container">
             {{ content }}
-            <h5 class="pb-4">{{ site.data[lang].news | default: 'news' | capitalize }}</h5>
-            {% include home.html %}
+            <h5>{{ site.data[lang].news | default: 'news' | capitalize }}</h5>
+            {% include news.html %}
         </main>
         {% include footer.html %}
     </body>
