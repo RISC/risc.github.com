@@ -1,1 +1,30 @@
 name: naam
+name_example: Jan Jansen
+name_error: gelieve een naam in te voeren
+email: e-mailadres
+email_example: jan.jansen@example.com
+email_error: gelieve een geldig e-mailadres in te voeren
+message: uw bericht
+message_error: gelieve een bericht in te voeren
+submit: verzenden
+
+monday: maandag
+tuesday: dinsday
+wednesday: woensdag
+thursday: donderdag
+friday: vrijdag
+saterday: zaterdag
+sunday: zondag
+
+from: van
+to: tot
+"on": " "
+
+men_training: heren trainen
+kids_training: jeugd trainen
+
+contact: contact
+trainings: trainen
+
+address1: Zwemkunststraat, 10
+address2: 1050 Elsene, Bruxelles
