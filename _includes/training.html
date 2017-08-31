@@ -1,8 +1,8 @@
-<div class="my-4">
+<div class="mt-5 mb-4">
     <h4>{{ site.data[lang].trainings | default: 'trainings' | capitalize }}</h4>
 </div>
 <div class="row mt-4">
-    <div class="col-sm-6">
+    <div class="col-sm-6 mb-4">
         <div class="card">
             <div class="card-header">
                 {{ site.data[lang]['men_training'] | default: "men training" | capitalize }}:
@@ -22,7 +22,7 @@
             </ul>
         </div>
     </div>
-    <div class="col-sm-6">
+    <div class="col-sm-6 mb-4">
         <div class="card">
             <div class="card-header">
                 {{ site.data[lang]['kids_training'] | default: "kids training" | capitalize }}:
