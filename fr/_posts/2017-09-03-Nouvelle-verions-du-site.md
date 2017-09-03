@@ -1,4 +1,4 @@
-Après une longue attente, la voici enfin, la nouvelle verions de notre site web.
+Après une longue attente, la voici enfin, la nouvelle verion de notre site web.
 
 Tout cela est parti d'une envie de l'équipe d'avoir une mascotte, est venu ensuite un talentueux designer qui nous a fait un nouveau logo dont on est ravi.
 
