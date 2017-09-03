@@ -8,8 +8,7 @@
             <div class="row">
                 <main class="col-md-9">
                     <section>{{ content }}</section>
-                    <section>{% include contact.html %}</section>
-                    <section>{% include map.html %}</section>
+                    {% include news_all.html %}
                 </main>
                 <aside class="col-md-3">
                     {% include social.html %}
@@ -19,5 +18,4 @@
         {% include footer.html %}
     </body>
     {% include script.html %}
-    <script src="/assets/js/contact.js"></script>
 </html>

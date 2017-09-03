@@ -16,6 +16,19 @@ friday: vendredi
 saterday: samedi
 sunday: dimanche
 
+january: janvier
+februray: février
+march: mars
+april: avril
+may: mai
+june: juin
+july: Juillet
+august: août
+september: septembre
+october: octobre
+november: novembre
+december: décembre
+
 from: de
 to: à
 "on": le
@@ -28,3 +41,12 @@ trainings: entraînements
 
 address1: Rue de la Natation, 10
 address2: 1050 Ixelles, Bruxelles
+
+situation: situation
+calendar: calendrier
+
+news: actualités
+no_news: pas d'actulaité à afficher... pour le moment
+read_more: lire plus
+
+last_news: les dernières actualités

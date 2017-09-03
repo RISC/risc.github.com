@@ -2,7 +2,7 @@
 lang: nl
 ref: about
 label: Over Ons
-sort: 20
+sort: 40
 layout: about
 ---
 

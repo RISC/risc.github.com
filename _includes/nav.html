@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark navbar-inverse fixed-top">
+<header class="navbar navbar-expand-lg navbar-dark navbar-inverse fixed-top">
     <a class="navbar-brand w-50" href="/{{ lang }}">
         <img src="/assets/images/risc-logo.png" alt="RISC logo"/>
         RISC - Water-Polo
@@ -8,7 +8,7 @@
         <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse ml-auto justify-content-end" id="navbarSupportedContent">
+    <nav class="collapse navbar-collapse ml-auto justify-content-end" id="navbarSupportedContent">
         <ul class="navbar-nav">
             {% for menu in localPages %}
             <li class="nav-item {% if page.path == menu.path %}active{% endif %}">
@@ -31,8 +31,8 @@
                 </div>
             </li>
         </ul>
-    </div>
-</nav>
+    </nav>
+</header>
 {% if page.title %}
-    <h1 class="sr-only">{{ page.title }}</h1>
+    <h1 class="sr-only">{{ page.label }}</h1>
 {% endif %}

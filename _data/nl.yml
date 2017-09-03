@@ -16,6 +16,19 @@ friday: vrijdag
 saterday: zaterdag
 sunday: zondag
 
+january: januari
+februray: februari
+march: maart
+april: april
+may: mei
+june: juni
+july: juli
+august: augustus
+september: september
+october: oktober
+november: november
+december: december
+
 from: van
 to: tot
 "on": " "
@@ -28,3 +41,12 @@ trainings: trainen
 
 address1: Zwemkunststraat, 10
 address2: 1050 Elsene, Bruxelles
+
+situation: situatie
+calendar: kalendar
+
+news: news
+no_news: geen news te tonen... voorlopig
+read_more: lees meer
+
+last_news: laatste news
