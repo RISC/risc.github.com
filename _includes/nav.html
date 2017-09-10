@@ -23,10 +23,13 @@
                     {{ lang | upcase }}
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    {% for page in languages %}
-                    <a class="dropdown-item" href="{{ page.url }}">
-                        {{page.lang | upcase }}
-                    </a>
+                    {% for alternatePage in alternatePages %}
+                        {% assign navLang=alternatePage.path | split: '/' | first %}
+                        {% if lang != navLang %}
+                            <a class="dropdown-item" href="{{ alternatePage.url }}">
+                                {{ navLang | upcase }}
+                            </a>
+                        {% endif %}
                     {% endfor %}
                 </div>
             </li>

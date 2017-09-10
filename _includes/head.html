@@ -21,7 +21,7 @@
     <link href="https://fonts.googleapis.com/css?family=Exo" rel="stylesheet">
     <link rel="stylesheet"
           href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
-    {% for alternatePage in pages %}
+    {% for alternatePage in alternatePages %}
     <link rel="alternate" hreflang="{{ alternatePage.lang }}"
           href="{{ alternatePage.url }}"/>
     {% endfor %}

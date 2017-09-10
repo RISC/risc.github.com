@@ -1,5 +1,4 @@
 ---
-lang: nl
 ref: index
 label: Home
 sort: 10

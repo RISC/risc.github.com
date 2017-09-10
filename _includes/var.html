@@ -1,5 +1,5 @@
-{% assign lang=page.lang | default: "en" %}
-{% assign ref=page.ref | default: 'index' %}
-{% assign pages=site.pages | where:"ref", ref  | sort: 'lang' %}
-{% assign localPages=site.pages | where:"lang", lang  | sort: 'sort'  %}
-{% assign languages=pages | where_exp:"item", "item.lang != lang" %}
+{% assign lang=page.path | split: '/' | first %}
+{% assign langPath=lang | append: '/' %}
+{% assign ref=page.ref %}
+{% assign alternatePages=site.pages | where:"ref", ref | sort: 'lang' %}
+{% assign localPages=site.pages | where_exp:"item", "item.path contains langPath"  | sort: 'sort'  %}

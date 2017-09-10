@@ -1,5 +1,4 @@
 ---
-lang: en
 ref: about
 label: About Us
 description: Information and a little bit of history about Royal Ixelles Swimming Club

@@ -1,5 +1,4 @@
 ---
-lang: nl
 ref: news
 label: News
 description: News van Royal Ixelles Swimming Club

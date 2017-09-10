@@ -1,5 +1,4 @@
 ---
-lang: nl
 ref: about
 label: Over Ons
 sort: 40
