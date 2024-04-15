@@ -1,6 +1,6 @@
 <h2>{{ site.data[lang].last_news | default: 'last news' | capitalize }}</h2>
 
-{% for post in site.categories[lang] limit:3 %}
+{% for post in site.categories[lang] limit:10 %}
     <article>
         <h6>
             {{ post.title | downcase | capitalize }}

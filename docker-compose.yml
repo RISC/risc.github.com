@@ -1,9 +1,9 @@
 version: '2.0'
 services:
   jekyll:
-    image: jekyll/jekyll
-    volumes: 
+    image: jekyll/jekyll:pages
+    volumes:
       - .:/srv/jekyll
     command: ["jekyll","serve"]
-    ports: 
+    ports:
       - 80:4000
