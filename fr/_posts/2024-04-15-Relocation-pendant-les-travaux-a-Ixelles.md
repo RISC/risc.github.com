@@ -1,0 +1,2 @@
+Durant les travaux sur le site de la piscine communal d'Ixelles, nous nous entraînons dans les installation du Royal Brussels Poseidon.
+Il ne nous est plus possible d'accueillir une équipe de jeunes pour le moment.
